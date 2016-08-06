@@ -7,12 +7,44 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
     tools:context="com.example.user.datascienceapp.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="data science app"
-        android:id="@+id/textView" />
+        android:text="STORY"
+        android:id="@+id/story_button"
+        android:textStyle="bold"
+        android:background="@drawable/customized_buttons_collect_data"
+        android:layout_marginTop="73dp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentStart="true"
+        android:textSize="16dp"
+        android:layout_marginBottom="81dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COLLECT DATA"
+        android:id="@+id/collect_button"
+        android:textColor="@android:color/white"
+        android:background="@drawable/customized_buttons_story"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANALYZE DATA"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:id="@+id/analyze_button"
+        android:textSize="16dp"
+        android:background="@drawable/customized_buttons_analyze_data"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="73dp" />
 
 </RelativeLayout>
