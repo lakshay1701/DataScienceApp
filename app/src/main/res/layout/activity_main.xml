@@ -43,6 +43,7 @@
         android:id="@+id/story_button"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:onClick="onClick"
         android:textStyle="bold"
         android:background="@drawable/customized_buttons_collect_data"
 
