@@ -53,7 +53,8 @@ public class Slider_activity extends AppCompatActivity {
                 R.layout.slider_screen1,
                 R.layout.slider_screen2,
                 R.layout.slider_screen3,
-                R.layout.slider_screen4};
+                R.layout.slider_screen4,
+        R.layout.slider_screen5};
 
         // adding bottom dots
         addBottomDots(0);
