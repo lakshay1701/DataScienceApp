@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#003b46"
-    android:orientation="vertical"
-    android:paddingBottom="30dp"
-    android:paddingTop="40dp">
+    android:background="#003b46">
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:text="testing 4"
+        android:id="@+id/textView"
         android:layout_marginTop="30dp"
-        android:text="testing 4" />
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

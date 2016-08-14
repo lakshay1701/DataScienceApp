@@ -16,9 +16,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.Interpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Scroller;
 import android.widget.TextView;
+
+import java.lang.reflect.Field;
 
 public class Slider_activity extends AppCompatActivity {
     private ViewPager viewPager;
@@ -27,7 +34,13 @@ public class Slider_activity extends AppCompatActivity {
     private TextView[] dots;
     private int[] layouts;
     private Button btnSkip, btnNext;
+    TextView slide;
 
+    @Override
+    public void onBackPressed() {
+        //do nothing
+        //make back button dis-functional
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +67,18 @@ public class Slider_activity extends AppCompatActivity {
                 R.layout.slider_screen2,
                 R.layout.slider_screen3,
                 R.layout.slider_screen4,
-        R.layout.slider_screen5};
+                R.layout.slider_screen5,
+                R.layout.slider_screen6,
+                R.layout.slider_screen7,
+                R.layout.slider_screen8,
+                R.layout.slider_screen9,
+                R.layout.slider_screen10,
+                R.layout.slider_screen11,
+                R.layout.slider_screen12,
+                R.layout.slider_screen13,
+                R.layout.slider_screen14,
+                R.layout.slider_screen15
+        };
 
         // adding bottom dots
         addBottomDots(0);
@@ -65,7 +89,39 @@ public class Slider_activity extends AppCompatActivity {
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+        viewPager.setPageTransformer(true, new ViewPager.PageTransformer() {
+            @Override
+            public void transformPage(View page, float position) {
+                // do transformation here
 
+                page.setRotationY(position * -30);
+
+
+            }
+        });
+        /*Field mScroller = null;
+        try {
+            mScroller = ViewPager.class.getDeclaredField("mScroller");
+            mScroller.setAccessible(true);
+            Scroller scroller = new Scroller(this, new DecelerateInterpolator());
+            mScroller.set(viewPager, scroller);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }*/
+        //slows speed of viewpager using fixedspeedscroller class
+        try {
+            Field mScroller;
+            mScroller = ViewPager.class.getDeclaredField("mScroller");
+            mScroller.setAccessible(true);
+            FixedSpeedScroller scroller = new FixedSpeedScroller(viewPager.getContext(), new DecelerateInterpolator());
+            // scroller.setFixedDuration(5000);
+            mScroller.set(viewPager, scroller);
+        } catch (NoSuchFieldException e) {
+        } catch (IllegalArgumentException e) {
+        } catch (IllegalAccessException e) {
+        }
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +134,7 @@ public class Slider_activity extends AppCompatActivity {
             public void onClick(View v) {
                 // checking for last page
                 // if last page home screen will be launched
+
                 int current = getItem(+1);
                 if (current < layouts.length) {
                     // move to next screen
@@ -134,6 +191,7 @@ public class Slider_activity extends AppCompatActivity {
                 // still pages are left
                 btnNext.setText(getString(R.string.next));
                 btnSkip.setVisibility(View.VISIBLE);
+
             }
         }
 
@@ -146,7 +204,10 @@ public class Slider_activity extends AppCompatActivity {
         public void onPageScrollStateChanged(int arg0) {
 
         }
+
     };
+
+
 
     /**
      * Making notification bar transparent
@@ -157,6 +218,7 @@ public class Slider_activity extends AppCompatActivity {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.TRANSPARENT);
         }
+
     }
 
     /**
@@ -193,6 +255,36 @@ public class Slider_activity extends AppCompatActivity {
         public void destroyItem(ViewGroup container, int position, Object object) {
             View view = (View) object;
             container.removeView(view);
+        }
+    }
+    //used to slow speed of viewpager
+    public class FixedSpeedScroller extends Scroller {
+
+        private int mDuration = 1000;
+
+        public FixedSpeedScroller(Context context) {
+            super(context);
+        }
+
+        public FixedSpeedScroller(Context context, Interpolator interpolator) {
+            super(context, interpolator);
+        }
+
+        public FixedSpeedScroller(Context context, Interpolator interpolator, boolean flywheel) {
+            super(context, interpolator, flywheel);
+        }
+
+
+        @Override
+        public void startScroll(int startX, int startY, int dx, int dy, int duration) {
+            // Ignore received duration, use fixed one instead
+            super.startScroll(startX, startY, dx, dy, mDuration);
+        }
+
+        @Override
+        public void startScroll(int startX, int startY, int dx, int dy) {
+            // Ignore received duration, use fixed one instead
+            super.startScroll(startX, startY, dx, dy, mDuration);
         }
     }
 }

@@ -3,86 +3,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-
-
     android:background="#c4dfe6"
+
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.user.datascienceapp.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        android:minHeight="?attr/actionBarSize"
-        android:background="#66a5ad"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#66a5ad"
+        android:minHeight="?attr/actionBarSize">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
             android:fontFamily="sans-serif-smallcaps"
-            android:textSize="25dp"
+            android:text="@string/app_name"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            />
+            android:textSize="25dp"
+            android:textStyle="bold" />
     </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:paddingTop="60dp"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingBottom="15dp"
-        android:orientation="vertical">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="STORY"
-        android:fontFamily="serif-monospace"
-        android:textSize="20dp"
-        android:id="@+id/story_button"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:onClick="onClick"
-        android:textStyle="bold"
-        android:background="@drawable/customized_buttons_collect_data"
+        android:paddingTop="60dp">
+
+        <Button
+            android:id="@+id/story_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/customized_buttons_collect_data"
+            android:fontFamily="serif-monospace"
+            android:onClick="onClick"
+            android:text="STORY"
+            android:textColor="@android:color/white"
 
 
-        android:textColor="@android:color/white"
-        android:layout_alignParentStart="true"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="COLLECT DATA"
-        android:id="@+id/collect_button"
-        android:textColor="@android:color/white"
-        android:background="@drawable/customized_buttons_story"
-        android:textStyle="bold"
-        android:fontFamily="serif-monospace"
-        android:textSize="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="80dp"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/story_button"
-        android:layout_alignParentStart="true" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ANALYZE DATA"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="80dp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:id="@+id/analyze_button"
-        android:fontFamily="serif-monospace"
-        android:textSize="20dp"
-        android:background="@drawable/customized_buttons_analyze_data"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/collect_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/story_button"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/customized_buttons_story"
+            android:fontFamily="serif-monospace"
+            android:text="COLLECT DATA"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/analyze_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/customized_buttons_analyze_data"
+            android:fontFamily="serif-monospace"
+            android:text="ANALYZE DATA"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
 
 
-
-         />
+            />
     </LinearLayout>
 </RelativeLayout>
