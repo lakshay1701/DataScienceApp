@@ -94,7 +94,9 @@ public class Slider_activity extends AppCompatActivity {
             public void transformPage(View page, float position) {
                 // do transformation here
 
-                page.setRotationY(position * -30);
+                final float normalizedposition = Math.abs(Math.abs(position) - 1);
+                page.setScaleX(normalizedposition / 2 + 0.5f);
+                page.setScaleY(normalizedposition / 2 + 0.5f);
 
 
             }

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="40dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     android:paddingBottom="30dp"
     android:background="#003b46">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="KNOW ABOUT DATA SCIENCE"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:text="Hello there! Let's begin with a story"
         android:textSize="20dp"
         android:id="@+id/slide1_text"
         android:textStyle="bold"
@@ -18,4 +21,4 @@
         android:fontFamily="serif-monospace"/>
 
 
-</LinearLayout>
+</RelativeLayout>
