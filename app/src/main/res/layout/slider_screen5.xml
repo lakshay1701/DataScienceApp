@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#003b46"
-    android:orientation="vertical"
-    android:paddingBottom="30dp"
-    android:paddingTop="40dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:text="testing 4" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="30dp">
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:src="@drawable/slide5" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_weight="0.2"
+            android:layout_width="wrap_content"
+            android:gravity="left"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:text="At that time, John Snow, a young British doctor did not really buy the idea of Cholera spreading through the air.He started looking around."
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>
