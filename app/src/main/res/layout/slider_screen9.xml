@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#003b46"
-    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:text="testing 4" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerInParent="true"
+        android:paddingTop="20dp">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_weight="0.2"
+            android:layout_width="wrap_content"
+            android:gravity="left"
+
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:text="Several interesting facts came to light by looking at this colored map-  Blocks near Broad street seemed to be heavily affected while neighboring blocks, just a mile or so away, seemed to be totally unaffected."
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

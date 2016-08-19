@@ -19,19 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
-            android:src="@drawable/slide5" />
+            android:src="@drawable/slide8" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_weight="0.2"
-            android:layout_width="wrap_content"
-            android:gravity="left"
-            android:padding="10dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
-            android:text="At that time, John Snow, a young British doctor did not really buy the idea of Cholera spreading through the air.He started looking around."
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+
     </LinearLayout>
 </RelativeLayout>
