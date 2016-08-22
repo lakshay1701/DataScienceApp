@@ -28,7 +28,7 @@
             android:gravity="left"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="On 7 September 1854, Snow took his research to the town officials and convinced them to take the handle off the pump, making it impossible to draw water."
+            android:text="Little by little, people who had left their homes and businesses in the Broad Street area out of fear of getting Cholera began to return."
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:padding="10dp"

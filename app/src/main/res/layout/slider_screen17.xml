@@ -14,12 +14,7 @@
         android:paddingRight="10dp"
         android:layout_centerInParent="true"
         android:paddingTop="30dp">
-        <ImageView
-            android:id="@+id/image1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.8"
-            android:src="@drawable/slide14" />
+       
 
         <TextView
             android:id="@+id/textView2"
@@ -28,7 +23,7 @@
             android:gravity="left"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="On 7 September 1854, Snow took his research to the town officials and convinced them to take the handle off the pump, making it impossible to draw water."
+            android:text="What John Snow did in this example is what data science actually is!"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:padding="10dp"
