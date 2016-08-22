@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">DataScience</string>
     <string name="title_activity_welcome">Home Screen</string>
-    <string name="next">NEXT</string>
-    <string name="skip">SKIP</string>
-    <string name="start">GOT IT</string>
+
 
 
 

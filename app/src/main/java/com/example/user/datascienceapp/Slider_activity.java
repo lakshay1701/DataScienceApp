@@ -77,7 +77,11 @@ public class Slider_activity extends AppCompatActivity {
                 R.layout.slider_screen12,
                 R.layout.slider_screen13,
                 R.layout.slider_screen14,
-                R.layout.slider_screen15
+                R.layout.slider_screen15,
+                R.layout.slider_screen16,
+                R.layout.slider_screen17,
+                R.layout.slider_screen18,
+                R.layout.slider_screen19
         };
 
         // adding bottom dots
@@ -187,11 +191,11 @@ public class Slider_activity extends AppCompatActivity {
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {
                 // last page. make button text to GOT IT
-                btnNext.setText(getString(R.string.start));
+                btnNext.setText("END");
                 btnSkip.setVisibility(View.GONE);
             } else {
                 // still pages are left
-                btnNext.setText(getString(R.string.next));
+                btnNext.setText(" NEXT");
                 btnSkip.setVisibility(View.VISIBLE);
 
             }

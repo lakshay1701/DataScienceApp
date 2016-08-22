@@ -22,6 +22,10 @@
     <color name="dot_dark_screen13">#66a5ad</color>
     <color name="dot_dark_screen14">#66a5ad</color>
     <color name="dot_dark_screen15">#66a5ad</color>
+    <color name="dot_dark_screen16">#66a5ad</color>
+    <color name="dot_dark_screen17">#66a5ad</color>
+    <color name="dot_dark_screen18">#66a5ad</color>
+    <color name="dot_dark_screen19">#66a5ad</color>
 
 
     <!-- dots active colors -->
@@ -40,7 +44,10 @@
     <color name="dot_light_screen13">#c4dfe6</color>
     <color name="dot_light_screen14">#c4dfe6</color>
     <color name="dot_light_screen15">#c4dfe6</color>
-
+    <color name="dot_light_screen16">#c4dfe6</color>
+    <color name="dot_light_screen17">#c4dfe6</color>
+    <color name="dot_light_screen18">#c4dfe6</color>
+    <color name="dot_light_screen19">#c4dfe6</color>
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>
@@ -58,6 +65,10 @@
         <item>@color/dot_light_screen13</item>
         <item>@color/dot_light_screen14</item>
         <item>@color/dot_light_screen15</item>
+        <item>@color/dot_light_screen16</item>
+        <item>@color/dot_light_screen17</item>
+        <item>@color/dot_light_screen18</item>
+        <item>@color/dot_light_screen19</item>
     </array>
 
     <array name="array_dot_inactive">
@@ -76,5 +87,9 @@
         <item>@color/dot_dark_screen13</item>
         <item>@color/dot_dark_screen14</item>
         <item>@color/dot_dark_screen15</item>
+        <item>@color/dot_dark_screen16</item>
+        <item>@color/dot_dark_screen17</item>
+        <item>@color/dot_dark_screen18</item>
+        <item>@color/dot_dark_screen19</item>
     </array>
 </resources>
