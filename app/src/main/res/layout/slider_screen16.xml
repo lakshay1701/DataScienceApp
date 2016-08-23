@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
-            android:src="@drawable/slide14" />
+            android:src="@drawable/slide17" />
 
         <TextView
             android:id="@+id/textView2"
@@ -31,6 +31,7 @@
             android:text="Little by little, people who had left their homes and businesses in the Broad Street area out of fear of getting Cholera began to return."
             android:textColor="@android:color/white"
             android:textSize="20dp"
+
             android:padding="10dp"
             android:textStyle="bold" />
     </LinearLayout>
