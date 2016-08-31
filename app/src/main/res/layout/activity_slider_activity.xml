@@ -18,6 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/dots_margin_bottom"
         android:gravity="center"
+        android:visibility="invisible"
         android:orientation="horizontal"></LinearLayout>
 
     <View
@@ -36,9 +37,9 @@
         android:layout_alignParentRight="true"
         android:background="@null"
         android:fontFamily="serif-monospace"
-        android:text=" NEXT"
+        android:text="@string/button_next"
         android:textColor="@android:color/white"
-        android:textSize="19dp"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <Button
@@ -49,8 +50,8 @@
         android:layout_alignParentLeft="true"
         android:background="@null"
         android:fontFamily="serif-monospace"
-        android:text="SKIP "
+        android:text="@string/button_skip"
         android:textColor="@android:color/white"
-        android:textSize="19dp"
+        android:textSize="20dp"
         android:textStyle="bold" />
 </RelativeLayout>

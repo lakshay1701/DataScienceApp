@@ -45,7 +45,7 @@
             android:background="@drawable/customized_buttons_collect_data"
             android:fontFamily="serif-monospace"
             android:onClick="onClick"
-            android:text="STORY"
+            android:text="@string/menu_item1"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -62,7 +62,7 @@
             android:layout_marginTop="80dp"
             android:background="@drawable/customized_buttons_story"
             android:fontFamily="serif-monospace"
-            android:text="COLLECT DATA"
+            android:text="@string/menu_item2"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -76,7 +76,7 @@
             android:layout_marginTop="80dp"
             android:background="@drawable/customized_buttons_analyze_data"
             android:fontFamily="serif-monospace"
-            android:text="ANALYZE DATA"
+            android:text="@string/menu_item3"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:textStyle="bold"

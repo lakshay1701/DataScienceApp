@@ -23,7 +23,7 @@
             android:gravity="left"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="In this example, John Snow showed how relating data on people’s source of water to the places they lives was able to show possibly infected hand pumps."
+            android:text="@string/slider_screen_19"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:padding="10dp"

@@ -28,7 +28,7 @@
             android:gravity="left"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="John discovered that people in the nearby unaffected blocks used a different hand pump to fetch water than those living near Broad street."
+            android:text="@string/slider_screen_12"
             android:textColor="@android:color/white"
             android:textSize="20dp"
 

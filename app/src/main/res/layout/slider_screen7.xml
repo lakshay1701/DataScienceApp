@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:fontFamily="serif-monospace"
-            android:text="He put out all collected information onto a map of London."
+            android:text="@string/slider_screen_7"
             android:textColor="@android:color/white"
             android:textSize="20dp"
 

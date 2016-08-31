@@ -29,7 +29,7 @@
 
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="He tracked down information from hospital and public records on when the outbreak began and tried to see what was common to the victims."
+            android:text="@string/slider_screen_6"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:textStyle="bold" />

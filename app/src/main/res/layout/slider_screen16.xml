@@ -28,7 +28,7 @@
             android:gravity="left"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="Little by little, people who had left their homes and businesses in the Broad Street area out of fear of getting Cholera began to return."
+            android:text="@string/slider_screen_16"
             android:textColor="@android:color/white"
             android:textSize="20dp"
 

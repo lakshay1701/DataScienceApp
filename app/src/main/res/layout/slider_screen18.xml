@@ -28,7 +28,7 @@
             android:gravity="left"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="Data Science is  learning new things about our world by collecting and analyzing information of events that have taken place."
+            android:text="@string/slider_screen_18"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:padding="10dp"

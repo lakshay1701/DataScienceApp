@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
             android:paddingTop="10dp"
-            android:text="At that time, John Snow, a young British doctor did not really buy the idea of Cholera spreading through the air. He started looking around."
+            android:text="@string/slider_screen_5"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:textStyle="bold" />

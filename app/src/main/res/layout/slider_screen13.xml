@@ -29,7 +29,7 @@
             android:padding="10dp"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="This helped Snow rule out other possible sources of the epidemic besides pump water."
+            android:text="@string/slider_screen_13"
             android:textColor="@android:color/white"
             android:textSize="20dp"
             android:textStyle="bold" />

@@ -24,7 +24,7 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="What was going on?"
+            android:text="@string/slider_screen_11"
 
             android:textColor="@android:color/white"
             android:textSize="21dp"

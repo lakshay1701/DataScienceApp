@@ -23,7 +23,7 @@
             android:gravity="left"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="It was considered that such diseases spread through the air while it really was a water-borne disease."
+            android:text="@string/slider_screen_4"
             android:textColor="@android:color/white"
             android:textSize="20dp"
 

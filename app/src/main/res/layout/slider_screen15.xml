@@ -28,7 +28,7 @@
             android:gravity="left"
             android:layout_height="wrap_content"
             android:fontFamily="serif-monospace"
-            android:text="The officials were reluctant to believe him, but took the handle off as a trial only to find the outbreak of cholera which almost immediately trickled to a stop."
+            android:text="@string/slider_screen_15"
             android:textColor="@android:color/white"
             android:textSize="20dp"
 
