@@ -1,7 +1,9 @@
 package com.example.user.datascienceapp;
 
+import android.content.DialogInterface;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -52,6 +54,8 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button:
+
+
                 float a = ratingBar.getRating();
                 if (a == 0) {
 
@@ -60,13 +64,13 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                 } else {
                     String Tag = "" + a;
                     Log.e(Tag, Tag);
-                    Toast.makeText(this, Tag, Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(this, Tag, Toast.LENGTH_SHORT).show();
                     ratingBar.setRating(0);
 
                     final View l = findViewById(R.id.main);
                     Animation ab = AnimationUtils.loadAnimation(
                            collect_data_activity.this, R.anim.blink);
-                    ab.setDuration(5000);
+                    ab.setDuration(3500);
                     ab.setAnimationListener(new Animation.AnimationListener() {
 
                         public void onAnimationEnd(Animation animation) {
@@ -99,6 +103,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
     @Override
     public void onRatingChanged(RatingBar ratingBar, float rating,
                                 boolean fromTouch) {
+        //do nothing
 
     }
 

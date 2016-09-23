@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dot_light_screen18">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@color/dot_light_screen18"
+     android:text="Following screens have some images you have rate them as whether you will friend that person or not.\nAssign their ratings on a scale of 1-5, where 1 meant you would certainly not befriend the person in the image and 5 meant you were very sure of befriending."
+     android:textSize="20dp"
+     android:padding="10dp"
+     android:fontFamily="serif-monospace"
+     android:textColor="#003b46"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customized_buttons_dialogbox"
+           android:layout_margin="20dp"
+            android:text="OK"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:fontFamily="serif-monospace"
+            android:id="@+id/declineButton"/>
+    </LinearLayout>
+    </RelativeLayout>
