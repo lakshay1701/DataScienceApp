@@ -56,9 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onClick(View v) {
                         // Close dialog
-                        dialog.dismiss();
+
                         Intent next1 = new Intent(MainActivity.this, collect_data_activity.class);
                         startActivity(next1);
+                        dialog.dismiss();
                     }
                 });
 

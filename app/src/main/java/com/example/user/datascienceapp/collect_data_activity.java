@@ -31,7 +31,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         //make back button dis-functional
         if (count == 0) {
             snackbarCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.snackbarCoordinatorLayout);
-            Snackbar.make(snackbarCoordinatorLayout, "Press again to exit", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(snackbarCoordinatorLayout, "Press again to exit", Snackbar.LENGTH_SHORT).show();
             count++;
         } else {
             finish();
@@ -60,7 +60,9 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                 if (a == 0) {
 
                     snackbarCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.snackbarCoordinatorLayout);
-                    Snackbar.make(snackbarCoordinatorLayout, "You cannot move to next picture without giving rating", Snackbar.LENGTH_LONG).show();
+
+                    Snackbar.make(snackbarCoordinatorLayout, "You cannot move to next picture without giving rating", Snackbar.LENGTH_SHORT).show();
+
                 } else {
                     String Tag = "" + a;
                     Log.e(Tag, Tag);
