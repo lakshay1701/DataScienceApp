@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button story;
+    Button story,collect;
 
     //    static  int count=0;
     // int count=0;
@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         story = (Button) findViewById(R.id.story_button);
         story.setOnClickListener(this);
+        collect = (Button) findViewById(R.id.collect_button);
+        collect.setOnClickListener(this);
 
 
     }
@@ -30,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.story_button:
                 Intent next = new Intent(MainActivity.this, Slider_activity.class);
                 startActivity(next);
+                break;
+            case R.id.collect_button:
+                Intent next1 = new Intent(MainActivity.this, collect_data_activity.class);
+                startActivity(next1);
                 break;
 
         }
