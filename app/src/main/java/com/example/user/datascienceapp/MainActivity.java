@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button story,collect;
+    Button story, collect;
 
     //    static  int count=0;
     // int count=0;
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onClick(View v) {
                         // Close dialog
+                        //create_databean_list a=new create_databean_list();
 
                         Intent next1 = new Intent(MainActivity.this, collect_data_activity.class);
                         startActivity(next1);
@@ -65,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 dialog.show();
                 dialog.getWindow().setAttributes(lp);
-
 
 
                 break;

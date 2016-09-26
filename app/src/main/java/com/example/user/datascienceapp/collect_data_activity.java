@@ -11,19 +11,24 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 public class collect_data_activity extends AppCompatActivity implements View.OnClickListener, RatingBar.OnRatingBarChangeListener {
     View v;
     Button newq;
-    TextView qno, ques;
+    TextView id, name, gender, game;
     CoordinatorLayout snackbarCoordinatorLayout;
     RatingBar ratingBar;
+    ImageView rating_image;
     int count = 0;
     static int numStars = 0;
+    ArrayList<DataBean> list1 = new ArrayList<DataBean>();
 
     @Override
     public void onBackPressed() {
@@ -42,13 +47,33 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // for (int l = 0; l <= 10; l++) {
+        //   DataBean obj = new DataBean();
+        // obj.setId(l);
+        //obj.setImage(R.drawable.slide1);
+        //obj.setGender("Male");
+        //obj.setGame("sports");
+        //list1.add(obj);
+        //}
         setContentView(R.layout.activity_collect_data_activity);
         newq = (Button) findViewById(R.id.button);
-        qno = (TextView) findViewById(R.id.number);
-        ques = (TextView) findViewById(R.id.name);
+        id = (TextView) findViewById(R.id.id);
+        name = (TextView) findViewById(R.id.name);
+        game = (TextView) findViewById(R.id.game);
+        gender = (TextView) findViewById(R.id.gender);
+        rating_image = (ImageView) findViewById(R.id.rating_image);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
         ratingBar.setOnRatingBarChangeListener(this);
         newq.setOnClickListener(collect_data_activity.this);
+        DataBean ob = new DataBean();
+        // ob=list.get(1);
+        list1 = create_databean_list.create_list();
+        ob = list1.get(0);
+        gender.setText(ob.getGender());
+        game.setText(ob.getGame());
+        id.setText(""+ob.getId());
+        name.setText(ob.getName());
+        rating_image.setImageResource(R.drawable.rating_pic_1);
     }
 
     public void onClick(View v) {
@@ -66,12 +91,12 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                 } else {
                     String Tag = "" + a;
                     Log.e(Tag, Tag);
-                   // Toast.makeText(this, Tag, Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(this, Tag, Toast.LENGTH_SHORT).show();
                     ratingBar.setRating(0);
 
                     final View l = findViewById(R.id.main);
                     Animation ab = AnimationUtils.loadAnimation(
-                           collect_data_activity.this, R.anim.blink);
+                            collect_data_activity.this, R.anim.blink);
                     ab.setDuration(3500);
                     ab.setAnimationListener(new Animation.AnimationListener() {
 
@@ -88,9 +113,16 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                         }
 
                     });
+                    DataBean ob = new DataBean();
+
+                    ob = list1.get(1);
                     l.startAnimation(ab);
-                    ques.setText("aaa");
-                    qno.setText("122");
+                    gender.setText(ob.getGender());
+                    game.setText(ob.getGame());
+                    id.setText("" + ob.getId());
+                    name.setText(ob.getName());
+                    rating_image.setImageResource(ob.getImage());
+
                 }
                 break;
         }

@@ -9,27 +9,52 @@ package com.example.user.datascienceapp;
  * Created by USER on 12-07-2016.
  */
 public class DataBean {
-    private int pic;
+    private String name;
+    private String gender;
 
-    public int getNo() {
-        return no;
+    public int getId() {
+        return id;
     }
 
-    public void setNo(int no) {
-        this.no = no;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getPic() {
-        return pic;
+    public String getGame() {
+        return game;
     }
 
-    public void setPic(int pic) {
-        this.pic = pic;
+    public void setGame(String game) {
+        this.game = game;
     }
 
-    private int no;
+    public int getImage() {
+        return image;
+    }
 
+    public void setImage(int image) {
+        this.image = image;
+    }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private int id;
+    private int image;
+    private String game;
 
 
 }
