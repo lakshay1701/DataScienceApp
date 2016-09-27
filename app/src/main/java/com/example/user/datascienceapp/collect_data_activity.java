@@ -27,6 +27,8 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
     RatingBar ratingBar;
     ImageView rating_image;
     int count = 0;
+    int pic_no=0;
+    int j=2;                //used for checking slide no
     static int numStars = 0;
     ArrayList<DataBean> list1 = new ArrayList<DataBean>();
 
@@ -68,7 +70,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         DataBean ob = new DataBean();
         // ob=list.get(1);
         list1 = create_databean_list.create_list();
-        ob = list1.get(0);
+        ob = list1.get(pic_no++);
         gender.setText(ob.getGender());
         game.setText(ob.getGame());
         id.setText(""+ob.getId());
@@ -91,38 +93,45 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                 } else {
                     String Tag = "" + a;
                     Log.e(Tag, Tag);
-                    // Toast.makeText(this, Tag, Toast.LENGTH_SHORT).show();
-                    ratingBar.setRating(0);
+                    if (j <= list1.size()) {
+                        // Toast.makeText(this, Tag, Toast.LENGTH_SHORT).show();
+                        ratingBar.setRating(0);
 
-                    final View l = findViewById(R.id.main);
-                    Animation ab = AnimationUtils.loadAnimation(
-                            collect_data_activity.this, R.anim.blink);
-                    ab.setDuration(3500);
-                    ab.setAnimationListener(new Animation.AnimationListener() {
+                        final View l = findViewById(R.id.main);
+                        Animation ab = AnimationUtils.loadAnimation(
+                                collect_data_activity.this, R.anim.blink);
+                        ab.setDuration(3500);
+                        ab.setAnimationListener(new Animation.AnimationListener() {
 
-                        public void onAnimationEnd(Animation animation) {
-                            // Do what ever you need, if not remove it.
-                        }
+                            public void onAnimationEnd(Animation animation) {
+                                // Do what ever you need, if not remove it.
+                            }
 
-                        public void onAnimationRepeat(Animation animation) {
-                            // Do what ever you need, if not remove it.
-                        }
+                            public void onAnimationRepeat(Animation animation) {
+                                // Do what ever you need, if not remove it.
+                            }
 
-                        public void onAnimationStart(Animation animation) {
-                            // Do what ever you need, if not remove it.
-                        }
+                            public void onAnimationStart(Animation animation) {
+                                // Do what ever you need, if not remove it.
+                            }
 
-                    });
-                    DataBean ob = new DataBean();
+                        });
+                        DataBean ob = new DataBean();
 
-                    ob = list1.get(1);
-                    l.startAnimation(ab);
-                    gender.setText(ob.getGender());
-                    game.setText(ob.getGame());
-                    id.setText("" + ob.getId());
-                    name.setText(ob.getName());
-                    rating_image.setImageResource(ob.getImage());
+                        ob = list1.get(pic_no++);
+                        l.startAnimation(ab);
+                        gender.setText(ob.getGender());
+                        game.setText(ob.getGame());
+                        id.setText("" + ob.getId());
+                        name.setText(ob.getName());
+                        rating_image.setImageResource(ob.getImage());
+                        j++;
 
+                    }
+                    else
+                    {
+                        finish();
+                    }
                 }
                 break;
         }
