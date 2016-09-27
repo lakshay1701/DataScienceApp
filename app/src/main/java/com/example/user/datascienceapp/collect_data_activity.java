@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 
@@ -27,8 +26,8 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
     RatingBar ratingBar;
     ImageView rating_image;
     int count = 0;
-    int pic_no=0;
-    int j=2;                //used for checking slide no
+    int pic_no = 0;
+    int j = 2;                //used for checking slide no
     static int numStars = 0;
     ArrayList<DataBean> list1 = new ArrayList<DataBean>();
 
@@ -73,7 +72,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         ob = list1.get(pic_no++);
         gender.setText(ob.getGender());
         game.setText(ob.getGame());
-        id.setText(""+ob.getId());
+        id.setText("" + ob.getId());
         name.setText(ob.getName());
         rating_image.setImageResource(R.drawable.rating_pic_1);
     }
@@ -127,9 +126,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                         rating_image.setImageResource(ob.getImage());
                         j++;
 
-                    }
-                    else
-                    {
+                    } else {
                         finish();
                     }
                 }
