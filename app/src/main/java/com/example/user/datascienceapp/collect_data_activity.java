@@ -1,6 +1,7 @@
 package com.example.user.datascienceapp;
 
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -75,6 +76,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         id.setText("" + ob.getId()+"/"+list1.size());
         name.setText(ob.getName());
         rating_image.setImageResource(R.drawable.rating_pic_1);
+
     }
 
     public void onClick(View v) {

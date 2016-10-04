@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button story, collect;
 
-    //    static  int count=0;
+       static  int counter=0;
     // int count=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         story.setOnClickListener(this);
         collect = (Button) findViewById(R.id.collect_button);
         collect.setOnClickListener(this);
+        Drawable loginActivityBackground = findViewById(R.id.main1).getBackground();
+        loginActivityBackground.setAlpha(120);
 
 
     }
@@ -48,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
                 //dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.dialogue_box_layout);
-                View v = getWindow().getDecorView();
-                v.setBackgroundResource(android.R.color.transparent);
+                //View v = getWindow().getDecorView();
+                //v.setBackgroundResource(android.R.color.transparent);
                 lp.copyFrom(dialog.getWindow().getAttributes());
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.MATCH_PARENT;
@@ -70,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
 
                 dialog.show();
+                Drawable loginActivityBackground = findViewById(R.id.main1).getBackground();
+                loginActivityBackground.setAlpha(127);
                 dialog.getWindow().setAttributes(lp);
 
 
