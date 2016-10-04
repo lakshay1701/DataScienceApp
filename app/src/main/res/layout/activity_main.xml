@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c4dfe6"
-
-
+    android:background="@drawable/back1"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.user.datascienceapp.MainActivity">
 
@@ -13,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#66a5ad"
+        android:background="#C80815"
         android:minHeight="?attr/actionBarSize">
 
         <TextView
@@ -46,7 +44,7 @@
             android:fontFamily="serif-monospace"
             android:onClick="onClick"
             android:text="@string/menu_item1"
-            android:textColor="@android:color/white"
+            android:textColor="@color/slider_text"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -63,7 +61,7 @@
             android:background="@drawable/customized_buttons_story"
             android:fontFamily="serif-monospace"
             android:text="@string/menu_item2"
-            android:textColor="@android:color/white"
+            android:textColor="@color/slider_text"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -77,7 +75,7 @@
             android:background="@drawable/customized_buttons_analyze_data"
             android:fontFamily="serif-monospace"
             android:text="@string/menu_item3"
-            android:textColor="@android:color/white"
+            android:textColor="@color/slider_text"
             android:textSize="20dp"
             android:textStyle="bold"
 

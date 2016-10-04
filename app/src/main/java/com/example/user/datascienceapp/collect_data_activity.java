@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class collect_data_activity extends AppCompatActivity implements View.OnClickListener, RatingBar.OnRatingBarChangeListener {
     View v;
     Button newq;
-    TextView id, name, gender, game;
+    TextView id, name, game;
     CoordinatorLayout snackbarCoordinatorLayout;
     RatingBar ratingBar;
     ImageView rating_image;
@@ -61,7 +61,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         id = (TextView) findViewById(R.id.id);
         name = (TextView) findViewById(R.id.name);
         game = (TextView) findViewById(R.id.game);
-        gender = (TextView) findViewById(R.id.gender);
+
         rating_image = (ImageView) findViewById(R.id.rating_image);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
         ratingBar.setOnRatingBarChangeListener(this);
@@ -70,9 +70,9 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         // ob=list.get(1);
         list1 = create_databean_list.create_list();
         ob = list1.get(pic_no++);
-        gender.setText(ob.getGender());
+       // gender.setText(ob.getGender());
         game.setText(ob.getGame());
-        id.setText("" + ob.getId());
+        id.setText("" + ob.getId()+"/"+list1.size());
         name.setText(ob.getName());
         rating_image.setImageResource(R.drawable.rating_pic_1);
     }
@@ -87,7 +87,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
 
                     snackbarCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.snackbarCoordinatorLayout);
 
-                    Snackbar.make(snackbarCoordinatorLayout, "You cannot move to next picture without giving rating", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(snackbarCoordinatorLayout, R.string.snack_bar_content, Snackbar.LENGTH_SHORT).show();
 
                 } else {
                     String Tag = "" + a;
@@ -119,9 +119,9 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
 
                         ob = list1.get(pic_no++);
                         l.startAnimation(ab);
-                        gender.setText(ob.getGender());
+                        //gender.setText(ob.getGender());
                         game.setText(ob.getGame());
-                        id.setText("" + ob.getId());
+                        id.setText("" + ob.getId()+"/"+list1.size());
                         name.setText(ob.getName());
                         rating_image.setImageResource(ob.getImage());
                         j++;

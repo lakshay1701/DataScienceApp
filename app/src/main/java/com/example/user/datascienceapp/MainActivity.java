@@ -12,6 +12,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.TypefaceSpan;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
@@ -43,8 +44,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 final Context context = this;
 
                 final Dialog dialog = new Dialog(context);
+
+               WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                //dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.dialogue_box_layout);
-                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                View v = getWindow().getDecorView();
+                v.setBackgroundResource(android.R.color.transparent);
                 lp.copyFrom(dialog.getWindow().getAttributes());
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
                 lp.height = WindowManager.LayoutParams.MATCH_PARENT;

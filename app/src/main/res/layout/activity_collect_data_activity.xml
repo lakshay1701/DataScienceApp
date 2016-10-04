@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dot_light_screen1"
+    android:background="@color/slider_background"
     tools:context="com.example.user.datascienceapp.collect_data_activity">
 
     <LinearLayout
@@ -19,8 +19,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
-            card_view:cardBackgroundColor="#66a5ad"
+            android:elevation="2dp"
+            android:outlineProvider="bounds"
+            
+            android:padding="10dp"
+            card_view:cardBackgroundColor="@color/slider_background"
+            card_view:cardCornerRadius="10dp"
 
 
             >
@@ -42,31 +46,13 @@
                 <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:padding="5dp"
 
                     >
 
                     <TableRow>
 
-                        <TextView
-                            android:id="@+id/id_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text="PICTURE NO"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/id_middle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text=": "
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/id"
@@ -74,32 +60,13 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="serif-monospace"
                             android:text=""
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/slider_text"
                             android:textSize="20dp"
                             android:textStyle="bold" />
                     </TableRow>
 
                     <TableRow>
 
-                        <TextView
-                            android:id="@+id/name_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text="NAME"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/name_middle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text=": "
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/name"
@@ -107,65 +74,14 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="serif-monospace"
                             android:text=""
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/slider_text"
                             android:textSize="20dp"
                             android:textStyle="bold" />
                     </TableRow>
 
-                    <TableRow>
-
-                        <TextView
-                            android:id="@+id/gender_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text="GENDER"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/gender_middle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text=": "
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/gender"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text=""
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
-                    </TableRow>
 
                     <TableRow>
 
-                        <TextView
-                            android:id="@+id/game_start"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text="LOVES TO PLAY"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/game_middle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text=": "
-                            android:textColor="#FFFFFF"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/game"
@@ -173,7 +89,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="serif-monospace"
                             android:text=""
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/slider_text"
                             android:textSize="20dp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -202,7 +118,7 @@
             android:background="@drawable/customized_button_next_picture"
             android:fontFamily="serif-monospace"
             android:text="Next"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/slider_text"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -213,7 +129,6 @@
         android:id="@+id/snackbarCoordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         >
 
     </android.support.design.widget.CoordinatorLayout>

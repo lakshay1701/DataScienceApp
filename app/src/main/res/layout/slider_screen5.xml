@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#003b46"
-
+    android:background="@color/slider_background"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +29,7 @@
             android:fontFamily="serif-monospace"
             android:paddingTop="10dp"
             android:text="@string/slider_screen_5"
-            android:textColor="@android:color/white"
+            android:textColor="@color/slider_text"
             android:textSize="20dp"
             android:textStyle="bold" />
     </LinearLayout>

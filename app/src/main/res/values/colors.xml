@@ -7,6 +7,9 @@
 
 
     <!-- dots inactive colors -->
+    <color name="slider_background">#FFFFFF</color>
+    <color name="slider_text"> #C80815</color>
+    <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#66a5ad</color>
     <color name="dot_dark_screen2">#66a5ad</color>
     <color name="dot_dark_screen3">#66a5ad</color>
@@ -92,4 +95,7 @@
         <item>@color/dot_dark_screen18</item>
         <item>@color/dot_dark_screen19</item>
     </array>
+
+
+
 </resources>
