@@ -1,14 +1,20 @@
 package com.example.user.datascienceapp;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.style.BackgroundColorSpan;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -16,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 
@@ -71,9 +78,9 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         // ob=list.get(1);
         list1 = create_databean_list.create_list();
         ob = list1.get(pic_no++);
-       // gender.setText(ob.getGender());
+        // gender.setText(ob.getGender());
         game.setText(ob.getGame());
-        id.setText("" + ob.getId()+"/"+list1.size());
+        id.setText("" + ob.getId() + "/" + list1.size());
         name.setText(ob.getName());
         rating_image.setImageResource(R.drawable.rating_pic_1);
 
@@ -106,6 +113,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
 
                             public void onAnimationEnd(Animation animation) {
                                 // Do what ever you need, if not remove it.
+
                             }
 
                             public void onAnimationRepeat(Animation animation) {
@@ -114,6 +122,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
 
                             public void onAnimationStart(Animation animation) {
                                 // Do what ever you need, if not remove it.
+
                             }
 
                         });
@@ -123,13 +132,42 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                         l.startAnimation(ab);
                         //gender.setText(ob.getGender());
                         game.setText(ob.getGame());
-                        id.setText("" + ob.getId()+"/"+list1.size());
+                        id.setText("" + ob.getId() + "/" + list1.size());
                         name.setText(ob.getName());
                         rating_image.setImageResource(ob.getImage());
                         j++;
 
                     } else {
-                        finish();
+                        final Context context = this;
+
+
+                        final Dialog dialog = new Dialog(context);
+                        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                        dialog.setContentView(R.layout.ending_dialog_box);
+                        dialog.setCanceledOnTouchOutside(false);
+
+                        dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+                        dialog.getWindow().setLayout(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.WRAP_CONTENT);
+                        Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
+
+                        // if decline button is clicked, close the custom dialog
+
+                        declineButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                // Close dialog
+                                //create_databean_list a=new create_databean_list();
+
+
+                                finish();
+
+                                dialog.dismiss();
+                            }
+                        });
+                        dialog.show();
+                        ratingBar.setRating(0);
+                        //dialog.getWindow().setAttributes(lp);
+
                     }
                 }
                 break;
