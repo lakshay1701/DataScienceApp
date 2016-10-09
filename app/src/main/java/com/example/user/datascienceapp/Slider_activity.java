@@ -1,5 +1,7 @@
 package com.example.user.datascienceapp;
 
+import android.app.Dialog;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Context;
@@ -38,8 +40,46 @@ public class Slider_activity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //do nothing
-        //make back button dis-functional
+        final Context context = this;
+
+
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.back_pressed_dialog_box);
+        dialog.setCanceledOnTouchOutside(false);
+
+        dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.getWindow().setLayout(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.WRAP_CONTENT);
+        Button okButton = (Button) dialog.findViewById(R.id.okButton1);
+        Button cancelButton = (Button) dialog.findViewById(R.id.cancelbutton);
+
+        // if decline button is clicked, close the custom dialog
+
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close dialog
+                //create_databean_list a=new create_databean_list();
+
+
+                finish();
+
+                dialog.dismiss();
+            }
+        });
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close dialog
+                //create_databean_list a=new create_databean_list();
+
+
+
+
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     @Override

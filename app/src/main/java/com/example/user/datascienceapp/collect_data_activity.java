@@ -43,27 +43,56 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
     public void onBackPressed() {
         //do nothing
         //make back button dis-functional
-        if (count == 0) {
-            snackbarCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.snackbarCoordinatorLayout);
-            Snackbar.make(snackbarCoordinatorLayout, "Press again to exit", Snackbar.LENGTH_SHORT).show();
-            count++;
-        } else {
-            finish();
-        }
+
+            final Context context = this;
+
+
+            final Dialog dialog = new Dialog(context);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.back_pressed_dialog_box);
+            dialog.setCanceledOnTouchOutside(false);
+
+            dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+            dialog.getWindow().setLayout(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.WRAP_CONTENT);
+            Button okButton = (Button) dialog.findViewById(R.id.okButton1);
+            Button cancelButton = (Button) dialog.findViewById(R.id.cancelbutton);
+
+            // if decline button is clicked, close the custom dialog
+
+           okButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Close dialog
+                    //create_databean_list a=new create_databean_list();
+
+
+                    finish();
+
+                    dialog.dismiss();
+                }
+            });
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close dialog
+                //create_databean_list a=new create_databean_list();
+
+
+
+
+                dialog.dismiss();
+            }
+        });
+            dialog.show();
+
+
 
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // for (int l = 0; l <= 10; l++) {
-        //   DataBean obj = new DataBean();
-        // obj.setId(l);
-        //obj.setImage(R.drawable.slide1);
-        //obj.setGender("Male");
-        //obj.setGame("sports");
-        //list1.add(obj);
-        //}
+
         setContentView(R.layout.activity_collect_data_activity);
         newq = (Button) findViewById(R.id.button);
         id = (TextView) findViewById(R.id.id);
@@ -94,9 +123,33 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                 float a = ratingBar.getRating();
                 if (a == 0) {
 
-                    snackbarCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.snackbarCoordinatorLayout);
+                    final Context context = this;
 
-                    Snackbar.make(snackbarCoordinatorLayout, R.string.snack_bar_content, Snackbar.LENGTH_SHORT).show();
+
+                    final Dialog dialog = new Dialog(context);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.no_rating_dialog_box);
+                    dialog.setCanceledOnTouchOutside(false);
+
+                    dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+                    dialog.getWindow().setLayout(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.WRAP_CONTENT);
+                    Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
+
+                    // if decline button is clicked, close the custom dialog
+
+                    declineButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Close dialog
+                            //create_databean_list a=new create_databean_list();
+
+
+                            finish();
+
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
 
                 } else {
                     String Tag = "" + a;
