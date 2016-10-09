@@ -22,7 +22,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/customized_buttons_dialogbox"
+            android:background="@drawable/customized_buttons_back_dialogbox"
            android:layout_margin="20dp"
             android:text="OKAY"
             android:textSize="19dp"
