@@ -108,9 +108,9 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         list1 = create_databean_list.create_list();
         ob = list1.get(pic_no++);
         // gender.setText(ob.getGender());
-        game.setText(ob.getGame());
+        game.setText(""+ob.getGame());
         id.setText("" + ob.getId() + "/" + list1.size());
-        name.setText(ob.getName());
+        name.setText(""+ob.getName());
         rating_image.setImageResource(R.drawable.rating_pic_1);
 
     }
@@ -144,7 +144,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                             //create_databean_list a=new create_databean_list();
 
 
-                            finish();
+
 
                             dialog.dismiss();
                         }
@@ -184,9 +184,9 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                         ob = list1.get(pic_no++);
                         l.startAnimation(ab);
                         //gender.setText(ob.getGender());
-                        game.setText(ob.getGame());
+                        game.setText(""+ob.getGame());
                         id.setText("" + ob.getId() + "/" + list1.size());
-                        name.setText(ob.getName());
+                        name.setText(""+ob.getName());
                         rating_image.setImageResource(ob.getImage());
                         j++;
 

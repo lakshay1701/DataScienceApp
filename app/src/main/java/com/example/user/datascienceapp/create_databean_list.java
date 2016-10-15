@@ -15,22 +15,25 @@ import java.*;
 public class create_databean_list {
     static ArrayList<DataBean> list1 = new ArrayList<DataBean>();
 
-    static int image_id[] = {R.drawable.rating_pic_1, R.drawable.rating_pic_2, R.drawable.rating_pic_1, R.drawable.rating_pic_2, R.drawable.rating_pic_1, R.drawable.rating_pic_2, R.drawable.rating_pic_1, R.drawable.rating_pic_2, R.drawable.rating_pic_1, R.drawable.rating_pic_2, R.drawable.rating_pic_1, R.drawable.rating_pic_2};
-
+    static int image_id[] = {R.drawable.rating_pic_1, R.drawable.rating_pic_2, R.drawable.rating_pic_3, R.drawable.rating_pic_4, R.drawable.rating_pic_5, R.drawable.rating_pic_6, R.drawable.rating_pic_7, R.drawable.rating_pic_8, R.drawable.rating_pic_1, R.drawable.rating_pic_2, R.drawable.rating_pic_1, R.drawable.rating_pic_2};
+    static String name[]={"NEERAJA","SEETARAM","TANMAY","MANJULA","RADHIKA","SHILPI","RAMLAL","ATMARAM"};
+    static String game[]={"LIKES PLAYING MUSICAL INSTRUMENTS","LIKES STITCHING CLOTHES","LIKES ARCHERY","LIKES GYMNASTICS","LIKES TO PLAY TENNIS","LIKES COLLECTING MARBELS"
+    ,"LIKES DANCING","LIKES TO PLAY BASKET-BALL"};
+    static String gender[]={"FEMALE","MALE","MALE","FEMALE","FEMALE","FEMALE","MALE","MALE"};
 
     public static ArrayList<DataBean> create_list() {
         int i = 0;
         if(list1.size()==0)
         {
-        for (int l = 1; l <= image_id.length; l++) {
+        for (int l = 1; l <= 8; l++) {
             DataBean obj = new DataBean();
             obj.setId(l);
 
             //Log.e("ge",img+"");
-            obj.setImage(image_id[i++]);
-            obj.setGender("Male");
-            obj.setName("LAKSHAY");
-            obj.setGame("SPORTS");
+            obj.setImage(image_id[i]);
+            obj.setGender(gender[i]);
+            obj.setName(name[i]);
+            obj.setGame(game[i++]);
             list1.add(obj);
         }
         }

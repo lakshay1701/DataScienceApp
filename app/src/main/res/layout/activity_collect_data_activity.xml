@@ -41,15 +41,7 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/rating_pic_1" />
 
-                <TableLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
 
-                    >
-
-                    <TableRow>
 
 
                         <TextView
@@ -58,10 +50,21 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="serif-monospace"
                             android:text=""
+                            android:gravity="center"
                             android:textColor="@color/slider_text"
                             android:textSize="20dp"
                             android:textStyle="bold" />
-                    </TableRow>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="2dp"
+                    >
+
 
                     <TableRow>
 
@@ -77,9 +80,7 @@
                             android:textStyle="bold" />
                     </TableRow>
 
-
                     <TableRow>
-
 
                         <TextView
                             android:id="@+id/game"
@@ -126,8 +127,7 @@
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/snackbarCoordinatorLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
     </android.support.design.widget.CoordinatorLayout>
 
