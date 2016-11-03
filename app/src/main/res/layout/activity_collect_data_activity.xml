@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -42,28 +42,25 @@
                     android:src="@drawable/rating_pic_1" />
 
 
-
-
-                        <TextView
-                            android:id="@+id/id"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif-monospace"
-                            android:text=""
-                            android:gravity="center"
-                            android:textColor="@color/slider_text"
-                            android:textSize="20dp"
-                            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/slider_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
                 <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
+                    android:paddingBottom="5dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="2dp"
-                    >
+                    android:paddingTop="2dp">
 
 
                     <TableRow>
@@ -111,25 +108,15 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/customized_button_next_picture"
             android:fontFamily="serif-monospace"
             android:text="Next"
             android:textColor="@color/slider_text"
             android:textSize="20dp"
+
             android:textStyle="bold" />
 
 
     </LinearLayout>
-
-    <android.support.design.widget.CoordinatorLayout
-        android:id="@+id/snackbarCoordinatorLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </android.support.design.widget.CoordinatorLayout>
-
-
-</RelativeLayout>
+</LinearLayout>

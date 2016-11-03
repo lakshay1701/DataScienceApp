@@ -4,7 +4,10 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -44,33 +47,33 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         //do nothing
         //make back button dis-functional
 
-            final Context context = this;
+        final Context context = this;
 
 
-            final Dialog dialog = new Dialog(context);
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.setContentView(R.layout.back_pressed_dialog_box);
-            dialog.setCanceledOnTouchOutside(false);
+        final Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.back_pressed_dialog_box);
+        dialog.setCanceledOnTouchOutside(false);
 
-            dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-            dialog.getWindow().setLayout(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.WRAP_CONTENT);
-            Button okButton = (Button) dialog.findViewById(R.id.okButton1);
-            Button cancelButton = (Button) dialog.findViewById(R.id.cancelbutton);
+        dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.getWindow().setLayout(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.WRAP_CONTENT);
+        Button okButton = (Button) dialog.findViewById(R.id.okButton1);
+        Button cancelButton = (Button) dialog.findViewById(R.id.cancelbutton);
 
-            // if decline button is clicked, close the custom dialog
+        // if decline button is clicked, close the custom dialog
 
-           okButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // Close dialog
-                    //create_databean_list a=new create_databean_list();
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close dialog
+                //create_databean_list a=new create_databean_list();
 
 
-                    finish();
+                finish();
 
-                    dialog.dismiss();
-                }
-            });
+                dialog.dismiss();
+            }
+        });
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,13 +81,10 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                 //create_databean_list a=new create_databean_list();
 
 
-
-
                 dialog.dismiss();
             }
         });
-            dialog.show();
-
+        dialog.show();
 
 
     }
@@ -101,6 +101,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
 
         rating_image = (ImageView) findViewById(R.id.rating_image);
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+
         ratingBar.setOnRatingBarChangeListener(this);
         newq.setOnClickListener(collect_data_activity.this);
         DataBean ob = new DataBean();
@@ -108,9 +109,9 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
         list1 = create_databean_list.create_list();
         ob = list1.get(pic_no++);
         // gender.setText(ob.getGender());
-        game.setText(""+ob.getGame());
+        game.setText("" + ob.getGame());
         id.setText("" + ob.getId() + "/" + list1.size());
-        name.setText(""+ob.getName());
+        name.setText("" + ob.getName());
         rating_image.setImageResource(R.drawable.rating_pic_1);
 
     }
@@ -142,8 +143,6 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                         public void onClick(View v) {
                             // Close dialog
                             //create_databean_list a=new create_databean_list();
-
-
 
 
                             dialog.dismiss();
@@ -184,9 +183,9 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
                         ob = list1.get(pic_no++);
                         l.startAnimation(ab);
                         //gender.setText(ob.getGender());
-                        game.setText(""+ob.getGame());
+                        game.setText("" + ob.getGame());
                         id.setText("" + ob.getId() + "/" + list1.size());
-                        name.setText(""+ob.getName());
+                        name.setText("" + ob.getName());
                         rating_image.setImageResource(ob.getImage());
                         j++;
 
@@ -237,6 +236,7 @@ public class collect_data_activity extends AppCompatActivity implements View.OnC
     public void onRatingChanged(RatingBar ratingBar, float rating,
                                 boolean fromTouch) {
         //do nothing
+
 
     }
 
